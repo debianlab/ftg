@@ -1,6 +1,6 @@
-from telethon.sync import events
+from telethon import events
+import asyncio
 
-
-@client.on(events.NewMessage(pattern=r"/.hi", outgoing=True))
+@borg.on(events.NewMessage(pattern=r"/.hi", outgoing=True))
 async def hi(event):
     await event.reply("Hello")
